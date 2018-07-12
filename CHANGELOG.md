@@ -8,4 +8,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* Add multi-line console transport. dc6afef
+* Add multi-line console transport. 9fade49
