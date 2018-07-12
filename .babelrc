@@ -1,0 +1,29 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "node": "8.0.0"
+      }
+    }],
+    "@babel/preset-stage-3",
+    "@babel/typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", {
+      "legacy": true
+    }],
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "cwd": "babelrc",
+      "root": ["./src"],
+      "extensions": [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".jsx",
+        ".json"
+      ]
+    }]
+  ],
+  "comments": false
+}

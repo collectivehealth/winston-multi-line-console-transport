@@ -1,0 +1,26 @@
+{
+	"extends": "tslint-xo/space",
+	"rules": {
+		// Requires using 'Array<T>' style for arrays.
+		"array-type": [true, "generic"],
+
+		// Do not enforce formatting rules for single-line comments.
+		"comment-format": false,
+
+		// Allow multiple consecutive blank lines.
+		"no-consecutive-blank-lines": false,
+
+		// Allow importing modules that are not listed as a dependency in the
+		// project’s package.json. This is disabled because it doesn't work with
+		// custom module resolution rules.
+		"no-implicit-dependencies": false,
+
+		// Disallows unused imports, variables, functions, classes, type parameters,
+		// and more.
+		"no-unused": [true, "unused-catch-binding"],
+
+		// Allow variable names in lowerCamelCase, PascalCase, and UPPER_CASE.
+		// Additionally, ban the use of reserved TypeScript keywords.
+		"variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]
+	}
+}
