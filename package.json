@@ -14,13 +14,13 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "del dist",
     "check:styles": "tslint --project tsconfig.json --format codeFrame",
     "check:types": "tsc --emitDeclarationOnly && rimraf **/*.spec.d.ts",
     "test": "jest",
     "prebuild": "run-p clean check:*",
     "build": "babel src --extensions='.ts' --ignore='**/*.spec.ts,**/*.d.ts' --out-dir=dist --source-maps=inline",
-    "prebump": "run-p build",
+    "prebump": "run-p test build",
     "bump": "standard-version",
     "bump:beta": "npm run prebump && standard-version --prerelease=beta"
   },
